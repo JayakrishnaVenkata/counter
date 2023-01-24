@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="jk">0</h1>
+    <button id="1" value="reset" name="reset">reset</button>
+    <button id="2" value="decrement" name="decrement">decrement</button>
+    <button id="3" value="increment" name="increment">increment</button>
+    <script>
+        
+        <!-- console.log(b); -->
+        let i=document.getElementById("3");
+        i.addEventListener("click",function(){
+            let b=document.querySelector("#jk").textContent;
+            let k=parseInt(b);
+            k+=1;
+            document.getElementById("jk").innerHTML=k;
+        });
+        let f=document.getElementById("2");
+        f.addEventListener("click",function(){
+            let b=document.querySelector("#jk").textContent;
+            let k=parseInt(b);
+            k-=1;
+            document.getElementById("jk").innerHTML=k;
+        });
+        let s=document.getElementById("1");
+        s.addEventListener("click",function(){
+            document.getElementById("jk").innerHTML = 0;
+        });
+    </script>
+</body>
+</html>
